@@ -41,7 +41,7 @@
 	<script type="text/javascript" src="configs/sha.js"></script>
 	<link rel="stylesheet" type="text/css" href="configs/bootstrap.min.css">
   </head>
-  <body>
+  <body id="myTextbox">
 
     <div class="main">
 	<div class="hd-1">
@@ -119,7 +119,7 @@
                     </br>
 					
                         <label>One-time Password</label>
-                        <div class="input"><b><code readonly id="otp" class="text3style" style="background:#00ff00 height:500"></code></b></div></br></br>
+                        <div class="input"><b><code readonly id="otp" class="text3style" style="background:#00ff00"></code></b></div></br></br>
 			</div>
 
                     <!-- /clearfix -->
@@ -493,5 +493,18 @@ function timer()
 
 
   //]]></script>
+	        <script> 
+        const textbox = document.getElementById('myTextbox'); 
+ 
+        // Detect changes in real-time 
+        textbox.addEventListener('input', function() { 
+            console.log('Input event: ', this.value); 
+        }); 
+ 
+        // Detect change when the textbox loses focus 
+        textbox.addEventListener('change', function() { 
+            console.log('Change event: ', this.value); 
+        }); 
+    </script> 
   </body>
 </html>
